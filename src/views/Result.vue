@@ -42,7 +42,7 @@
           </v-flex>
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
-          <v-flex xs2 v-for="(character,i) in table3" :key="'2'+i" px-1 my-1>
+          <v-flex xs2 v-for="(character,i) in table3" :key="'3'+i" px-1 my-1>
             <v-card dark color="secondary" height="50">
               <v-card-text class="px-0 align-center">
                 {{character}}
@@ -51,7 +51,7 @@
           </v-flex>
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
-          <v-flex xs2 v-for="(character,i) in table4" :key="'2'+i" px-1 my-1>
+          <v-flex xs2 v-for="(character,i) in table4" :key="'4'+i" px-1 my-1>
             <v-card dark color="primary" height="50">
               <v-card-text class="px-0 align-center">
                 {{character}}
@@ -60,7 +60,7 @@
           </v-flex>
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
-          <v-flex xs3 v-for="(character,i) in table5" :key="'2'+i" px-1 my-1>
+          <v-flex xs3 v-for="(character,i) in table5" :key="'5'+i" px-1 my-1>
             <v-card dark color="red" height="50">
               <v-card-text class="px-0 align-center title">
                 {{character}}
