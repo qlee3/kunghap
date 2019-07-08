@@ -34,7 +34,7 @@
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
           <v-flex xs2 v-for="(character,i) in table2" :key="'2'+i" px-1 my-1>
-            <v-card dark color="primary" height="50">
+            <v-card dark color="#311e3e" height="50">
               <v-card-text class="px-0 align-center">
                 {{character}}
               </v-card-text>
@@ -43,7 +43,7 @@
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
           <v-flex xs2 v-for="(character,i) in table3" :key="'3'+i" px-1 my-1>
-            <v-card dark color="secondary" height="50">
+            <v-card dark color="#512645" height="50">
               <v-card-text class="px-0 align-center">
                 {{character}}
               </v-card-text>
@@ -52,7 +52,7 @@
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
           <v-flex xs2 v-for="(character,i) in table4" :key="'4'+i" px-1 my-1>
-            <v-card dark color="primary" height="50">
+            <v-card dark color="#87314e" height="50">
               <v-card-text class="px-0 align-center">
                 {{character}}
               </v-card-text>
@@ -61,7 +61,7 @@
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
           <v-flex xs3 v-for="(character,i) in table5" :key="'5'+i" px-1 my-1>
-            <v-card dark color="red" height="50">
+            <v-card dark color="primary" height="50">
               <v-card-text class="px-0 align-center title">
                 {{character}}
               </v-card-text>
@@ -80,15 +80,18 @@
           </v-flex>
         </v-layout>
         <v-layout justify-center xs12 sm12 md4 row wrap>
-          <v-flex xs12 px-1 my-1>
-            <v-card dark class="yellow align-center subtitle black--text" @click="sendLink">
-              카카오톡으로 링크 전송
+          <v-flex xs12 px-1>
+            <v-card dark class="yellow align-center subtitle black--text line-height-30">
+              <v-btn flat block class="black--text" height="30px" @click="sendLink">
+                <v-img class="" :src="require('../assets/kakao_talk_icon.png')" height="25" width="25" max-width="30" aspect-ratio="1:1" contain></v-img>
+                카카오톡으로 결과 전송
+              </v-btn>
             </v-card>
           </v-flex>
-          <v-flex xs12 px-1 my-1>
-            <v-card dark class="primary align-center subtitle" @click="$router.push('/')">
-              이름 궁합 맞춰보기!
-            </v-card>
+          <v-flex xs12 px-1>
+            <v-btn dark block color="secondary" class="align-center subtitle line-height-30" height="30px" @click="$router.push('/')">
+              다른 이름으로 궁합 맞춰보러 가기
+            </v-btn>
           </v-flex>
         </v-layout>
       </v-container>
@@ -296,6 +299,12 @@ export default {
           return 6
         case 'ㅆ' :
           return 4
+        case 'ㄸ' :
+          return 6
+        case 'ㅉ' :
+          return 6
+        case 'ㅃ' :
+          return 8
         default :
           return 0
       }
@@ -307,5 +316,12 @@ export default {
 <style lang="scss">
   .align-center{
     text-align: center;
+  }
+
+  .line-height-30 {
+    line-height: 30px;
+  }
+  .img-align{
+    display:block;
   }
 </style>
